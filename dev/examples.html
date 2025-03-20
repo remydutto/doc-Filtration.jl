@@ -13,7 +13,7 @@ g₋(m) = 0
 
 model = Model(g₊, g₋, f₊, f₋, :max)
 synthesis = Synthesis(model, tlim, mlim)
-plot(synthesis, xlabel = &quot;Time (t)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-484abe1a.svg" alt="Example block output"/><h3 id="Cogan-Chellamb,-2014"><a class="docs-heading-anchor" href="#Cogan-Chellamb,-2014">Cogan Chellamb, 2014</a><a id="Cogan-Chellamb,-2014-1"></a><a class="docs-heading-anchor-permalink" href="#Cogan-Chellamb,-2014" title="Permalink"></a></h3><p>In [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0376738814005110">Cogan and Chellamb, 2014</a>] and [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0376738816311796">Cogan and al., 2016</a>] :</p><pre><code class="language-julia hljs">tlim = (0,40); mlim = (0,10)
+plot(synthesis, xlabel = &quot;Time (t)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-21cadec2.svg" alt="Example block output"/><h3 id="Cogan-Chellamb,-2014"><a class="docs-heading-anchor" href="#Cogan-Chellamb,-2014">Cogan Chellamb, 2014</a><a id="Cogan-Chellamb,-2014-1"></a><a class="docs-heading-anchor-permalink" href="#Cogan-Chellamb,-2014" title="Permalink"></a></h3><p>In [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0376738814005110">Cogan and Chellamb, 2014</a>] and [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0376738816311796">Cogan and al., 2016</a>] :</p><pre><code class="language-julia hljs">tlim = (0,40); mlim = (0,10)
 a = 1; b = 1; e = 1
 
 f₁(m) = b ./ (e .+ m)
@@ -27,7 +27,7 @@ g₋(m) = 0
 
 model = Model(g₊, g₋, f₊, f₋, :max)
 synthesis = Synthesis(model, tlim, mlim)
-plot(synthesis, xlabel = &quot;Time (t)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-16e52629.svg" alt="Example block output"/><h3 id="Kalboussi-et-al.,-2018"><a class="docs-heading-anchor" href="#Kalboussi-et-al.,-2018">Kalboussi et al., 2018</a><a id="Kalboussi-et-al.,-2018-1"></a><a class="docs-heading-anchor-permalink" href="#Kalboussi-et-al.,-2018" title="Permalink"></a></h3><p>In [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0376738817319166">Kalboussi et al., 2018</a>] :</p><pre><code class="language-julia hljs">tlim = (0, 0.25); mlim = (0,10)
+plot(synthesis, xlabel = &quot;Time (t)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-961027bc.svg" alt="Example block output"/><h3 id="Kalboussi-et-al.,-2018"><a class="docs-heading-anchor" href="#Kalboussi-et-al.,-2018">Kalboussi et al., 2018</a><a id="Kalboussi-et-al.,-2018-1"></a><a class="docs-heading-anchor-permalink" href="#Kalboussi-et-al.,-2018" title="Permalink"></a></h3><p>In [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0376738817319166">Kalboussi et al., 2018</a>] :</p><pre><code class="language-julia hljs">tlim = (0, 0.25); mlim = (0,10)
 a₂ = 0.64; b = 490.07; d = 4125.6; e = 18.06
 
 f₁(m) = b./ (e .+ m)
@@ -41,7 +41,7 @@ g₋(m) = 0
 
 model = Model(g₊, g₋, f₊, f₋, :max)
 synthesis = Synthesis(model, tlim, mlim)
-plot(synthesis, xlabel = &quot;Time (t)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-f872d6ae.svg" alt="Example block output"/><h2 id="Min-energy-example"><a class="docs-heading-anchor" href="#Min-energy-example">Min energy example</a><a id="Min-energy-example-1"></a><a class="docs-heading-anchor-permalink" href="#Min-energy-example" title="Permalink"></a></h2><h3 id="Aiouche-et-al.,-2020"><a class="docs-heading-anchor" href="#Aiouche-et-al.,-2020">Aiouche et al., 2020</a><a id="Aiouche-et-al.,-2020-1"></a><a class="docs-heading-anchor-permalink" href="#Aiouche-et-al.,-2020" title="Permalink"></a></h3><p>In [<a href="https://ieeexplore.ieee.org/document/9143741">Aiouche et al., 2020</a>] : </p><pre><code class="language-julia hljs">vlim = (0,50); mlim = (0,50)
+plot(synthesis, xlabel = &quot;Time (t)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-b3f98f3b.svg" alt="Example block output"/><h2 id="Min-energy-example"><a class="docs-heading-anchor" href="#Min-energy-example">Min energy example</a><a id="Min-energy-example-1"></a><a class="docs-heading-anchor-permalink" href="#Min-energy-example" title="Permalink"></a></h2><h3 id="Aiouche-et-al.,-2020"><a class="docs-heading-anchor" href="#Aiouche-et-al.,-2020">Aiouche et al., 2020</a><a id="Aiouche-et-al.,-2020-1"></a><a class="docs-heading-anchor-permalink" href="#Aiouche-et-al.,-2020" title="Permalink"></a></h3><p>In [<a href="https://ieeexplore.ieee.org/document/9143741">Aiouche et al., 2020</a>] : </p><pre><code class="language-julia hljs">vlim = (0,50); mlim = (0,50)
 ap = 0; bp = 1; cp = 0.16; dp = 3; Qp = 1
 ar = 0.5; cr = 0.64; dr = 12; Qr = 2
 
@@ -59,22 +59,23 @@ e₊(m) = 0.5*(lp(m) - lr(m))
 
 model = Model(e₊, e₋, f₊, f₋, g₊, g₋, :min; initial_guess = 20.)
 synthesis = Synthesis(model, vlim, mlim)
-plt = plot(synthesis, xlabel = &quot;Volume (v)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-801ee199.svg" alt="Example block output"/><h3 id="Ellouze-et-al.,-2023"><a class="docs-heading-anchor" href="#Ellouze-et-al.,-2023">Ellouze et al., 2023</a><a id="Ellouze-et-al.,-2023-1"></a><a class="docs-heading-anchor-permalink" href="#Ellouze-et-al.,-2023" title="Permalink"></a></h3><p>In [<a href="https://www.sciencedirect.com/science/article/abs/pii/S221471442300898X">Ellouze et al., 2023</a>] :</p><pre><code class="language-julia hljs">vlim = (0,50); mlim = (0,50)
-ap = 0; bp = 1; cp = 0.16; dp = 3; Qp = 1
-ar = 0.5; cr = 0.64; dr = 12; Qr = 2
+plt = plot(synthesis, xlabel = &quot;Volume (v)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-6720e75f.svg" alt="Example block output"/><h3 id="Ellouze-et-al.,-2023"><a class="docs-heading-anchor" href="#Ellouze-et-al.,-2023">Ellouze et al., 2023</a><a id="Ellouze-et-al.,-2023-1"></a><a class="docs-heading-anchor-permalink" href="#Ellouze-et-al.,-2023" title="Permalink"></a></h3><p>In [<a href="https://www.sciencedirect.com/science/article/abs/pii/S221471442300898X">Ellouze et al., 2023</a>] :</p><pre><code class="language-julia hljs">vlim = (0, 0.015); mlim = (0, 0.05)
+Jv = 2.71e-6; JBW = 5.66e-6; TMP01 = 7892.4; Rm = 1.79e12
+C = 2184e-3; β = 1e-6; α = 2.02e14; η = 4.9e-3
+k1f = 2.0769; k2f = 0.0185; k1BW = 9.0551; k2BW = 0.0870
 
-fp(m) = -ap*m + bp
-fr(m) = ar*m
-lp(m) = cp*m + dp
-lr(m) = cr*m + dr
+ff(m) = C*Jv - C*Jv*β*m
+fBW(m) = -η*m
+Ef(m) = k1f * m + k2f
+EBW(m) = k1BW * m + k2BW
 
-f₊(m) = 0.5*(fp(m) + fr(m))
-f₋(m) = 0.5*(fp(m) - fr(m))
-g₊(m) = 0.5*(Qp + Qr)
-g₋(m) = 0.5*(Qp - Qr)
-e₋(m) = 0.5*(lp(m) + lr(m))
-e₊(m) = 0.5*(lp(m) - lr(m))
+f₊(m) = 0.5*(ff(m) - fBW(m))
+f₋(m) = 0.5*(ff(m) + fBW(m))
+g₊(m) = 0.5*(Jv + JBW)
+g₋(m) = 0.5*(Jv - JBW)
+e₊(m) = 0.5*(Ef(m) - EBW(m))
+e₋(m) = 0.5*(Ef(m) + EBW(m))
 
 model = Model(e₊, e₋, f₊, f₋, g₊, g₋, :min; initial_guess = 20.)
 synthesis = Synthesis(model, vlim, mlim)
-plt = plt = plot(synthesis, SL_nb_points = 10, xlabel = &quot;Volume (v)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-3bd49a9c.svg" alt="Example block output"/></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="basic-usage.html">« Basic Usage</a><a class="docs-footer-nextpage" href="api-filtration.html">API »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.8.1 on <span class="colophon-date" title="Tuesday 18 March 2025 22:06">Tuesday 18 March 2025</span>. Using Julia version 1.11.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+plt = plot(synthesis, SL_nb_points = 10, xlabel = &quot;Volume (v)&quot;, ylabel = &quot;Mass (m)&quot;)</code></pre><img src="examples-cad6bff2.svg" alt="Example block output"/></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="basic-usage.html">« Basic Usage</a><a class="docs-footer-nextpage" href="api-filtration.html">API »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.8.1 on <span class="colophon-date" title="Wednesday 19 March 2025 18:47">Wednesday 19 March 2025</span>. Using Julia version 1.11.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
