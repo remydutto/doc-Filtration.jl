@@ -867,7 +867,7 @@ weakdeps = ["PDMats", "SparseArrays", "StaticArrays", "Statistics"]
     FillArraysStatisticsExt = "Statistics"
 
 [[deps.Filtration]]
-deps = ["DiffEqCallbacks", "DocStringExtensions", "ForwardDiff", "Ipopt", "LaTeXStrings", "ModelingToolkit", "Optimization", "OptimizationMOI", "OptimizationOptimJL", "OrdinaryDiffEq", "Plots", "Roots", "StructuralIdentifiability"]
+deps = ["DiffEqCallbacks", "DocStringExtensions", "ForwardDiff", "Ipopt", "LaTeXStrings", "ModelingToolkit", "NonlinearSolve", "Optimization", "OptimizationMOI", "OptimizationOptimJL", "OrdinaryDiffEq", "Plots", "Roots", "StructuralIdentifiability"]
 path = ".."
 uuid = "8171f1f2-2abc-474a-96b5-c6c0d316237d"
 version = "0.1.0"
