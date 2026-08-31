@@ -7,7 +7,7 @@ Documentation for the [Filtration.jl](https://github.com/remydutto/Filtration.jl
 [ci-img]: https://github.com/remydutto/Filtration.jl/actions/workflows/CI.yml/badge.svg?branch=main
 [ci-url]: https://github.com/remydutto/Filtration.jl/actions/workflows/CI.yml?query=branch%3Amain
 
-[co-img]: https://codecov.io/gh/remydutto/Filtration.jl/branch/main/graph/badge.svg?token=YM5YQQUSO3
+[co-img]: https://codecov.io/gh/remydutto/Filtration.jl/graph/badge.svg?token=Z7W8GHW7R0
 [co-url]: https://codecov.io/gh/remydutto/Filtration.jl
 
 [doc-dev-img]: https://img.shields.io/badge/docs-dev-8A2BE2.svg
