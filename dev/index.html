@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Introduction · Filtration</title><meta name="title" content="Introduction · Filtration"/><meta property="og:title" content="Introduction · Filtration"/><meta property="twitter:title" content="Introduction · Filtration"/><meta name="description" content="Documentation for Filtration."/><meta property="og:description" content="Documentation for Filtration."/><meta property="twitter:description" content="Documentation for Filtration."/><script data-outdated-warner src="assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="search_index.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="index.html">Filtration</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li class="is-active"><a class="tocitem" href="index.html">Introduction</a><ul class="internal"><li class="toplevel"><a class="tocitem" href="#Installation"><span>Installation</span></a></li><li class="toplevel"><a class="tocitem" href="#Getting-started"><span>Getting started</span></a></li><li><a class="tocitem" href="#Reproducibility"><span>Reproducibility</span></a></li><li class="toplevel"><a class="tocitem" href="#Parteners-and-Fundings"><span>Parteners and Fundings</span></a></li></ul></li><li><a class="tocitem" href="background.html">Background</a></li><li><a class="tocitem" href="basic-usage.html">Basic usage &amp; Examples</a></li><li><span class="tocitem">Manual</span><ul><li><a class="tocitem" href="model.html">Model</a></li><li><a class="tocitem" href="solution.html">Solution</a></li><li><a class="tocitem" href="real_solve.html">Real solution</a></li><li><a class="tocitem" href="fit.html">Fit data</a></li><li><a class="tocitem" href="StructuralIdentifiability.html">Structural identifiability</a></li></ul></li><li><a class="tocitem" href="multisynthesis.html">Experimental</a></li><li><a class="tocitem" href="2Res_CT.html">Control-Toolbox</a></li><li><a class="tocitem" href="api-filtration.html">API</a></li><li><a class="tocitem" href="dev-filtration.html">Developpers</a></li><li><a class="tocitem" href="references.html">References</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="index.html">Introduction</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="index.html">Introduction</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/remydutto/doc-Filtration.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Filtration.jl"><a class="docs-heading-anchor" href="#Filtration.jl">Filtration.jl</a><a id="Filtration.jl-1"></a><a class="docs-heading-anchor-permalink" href="#Filtration.jl" title="Permalink"></a></h1><p><a href="https://remydutto.github.io/doc-Filtration.jl">Filtration.jl</a> is a Julia package for solving optimal control problems arising in production–regeneration systems. It provides a high-level interface to define, analyze, and solve this specific class of control problems.</p><p>This package is designed to : </p><ul><li>provide optimal control solutions</li><li>generate feedback synthesis</li><li>propose methods to construct a real-world control from optimal solutions</li><li>fit model with real-world data</li></ul><h1 id="Installation"><a class="docs-heading-anchor" href="#Installation">Installation</a><a id="Installation-1"></a><a class="docs-heading-anchor-permalink" href="#Installation" title="Permalink"></a></h1><p>First of all, make sure you have <a href="https://julialang.org/downloads/">Julia</a> installed.</p><p>This repository is private, so installing the package requires GitHub access to it (your git credentials must be authorized on <code>remydutto/Filtration.jl</code>). If you don&#39;t have access yet and are interested in trying or using <a href="https://remydutto.github.io/doc-Filtration.jl">Filtration.jl</a>, <a href="https://remydutto.github.io/">please contact me</a>.</p><p>Once authorized, open Julia&#39;s REPL, press &lt;kbd&gt;]&lt;/kbd&gt; to enter the package mode, and add the package:</p><pre><code class="language-julia hljs">pkg&gt; add https://github.com/remydutto/Filtration.jl</code></pre><h1 id="Getting-started"><a class="docs-heading-anchor" href="#Getting-started">Getting started</a><a id="Getting-started-1"></a><a class="docs-heading-anchor-permalink" href="#Getting-started" title="Permalink"></a></h1><p>To see how to construct and solve a production-regeneration problem using <a href="https://remydutto.github.io/doc-Filtration.jl">Filtration.jl</a>, please check <a href="https://remydutto.github.io/doc-Filtration.jl/dev/basic-usage.html">basic usage example</a>.</p><h2 id="Reproducibility"><a class="docs-heading-anchor" href="#Reproducibility">Reproducibility</a><a id="Reproducibility-1"></a><a class="docs-heading-anchor-permalink" href="#Reproducibility" title="Permalink"></a></h2><details><summary>The documentation of this package was built using these direct dependencies,</summary><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Status `~/work/Filtration.jl/Filtration.jl/docs/Project.toml`
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Introduction · Filtration</title><meta name="title" content="Introduction · Filtration"/><meta property="og:title" content="Introduction · Filtration"/><meta property="twitter:title" content="Introduction · Filtration"/><meta name="description" content="Documentation for Filtration."/><meta property="og:description" content="Documentation for Filtration."/><meta property="twitter:description" content="Documentation for Filtration."/><script data-outdated-warner src="assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.63.2/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="search_index.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="index.html">Filtration</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li class="is-active"><a class="tocitem" href="index.html">Introduction</a><ul class="internal"><li class="toplevel"><a class="tocitem" href="#Installation"><span>Installation</span></a></li><li class="toplevel"><a class="tocitem" href="#Getting-started"><span>Getting started</span></a></li><li><a class="tocitem" href="#Reproducibility"><span>Reproducibility</span></a></li><li class="toplevel"><a class="tocitem" href="#Parteners-and-Fundings"><span>Parteners and Fundings</span></a></li></ul></li><li><a class="tocitem" href="background.html">Background</a></li><li><a class="tocitem" href="basic-usage.html">Basic usage &amp; Examples</a></li><li><span class="tocitem">Manual</span><ul><li><a class="tocitem" href="model.html">Model</a></li><li><a class="tocitem" href="solution.html">Solution</a></li><li><a class="tocitem" href="real_solve.html">Real solution</a></li><li><a class="tocitem" href="fit.html">Fit data</a></li><li><a class="tocitem" href="StructuralIdentifiability.html">Structural identifiability</a></li></ul></li><li><a class="tocitem" href="multisynthesis.html">Experimental</a></li><li><a class="tocitem" href="2Res_CT.html">Control-Toolbox</a></li><li><a class="tocitem" href="api-filtration.html">API</a></li><li><a class="tocitem" href="dev-filtration.html">Developpers</a></li><li><a class="tocitem" href="references.html">References</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="index.html">Introduction</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="index.html">Introduction</a></li></ul></nav><div class="docs-right"><a class="docs-navbar-link" href="https://github.com/remydutto/doc-Filtration.jl" title="View the repository on GitHub"><span class="docs-icon fa-brands"></span><span class="docs-label is-hidden-touch">GitHub</span></a><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="Filtration.jl"><a class="docs-heading-anchor" href="#Filtration.jl">Filtration.jl</a><a id="Filtration.jl-1"></a><a class="docs-heading-anchor-permalink" href="#Filtration.jl" title="Permalink"></a></h1><p><a href="https://remydutto.github.io/doc-Filtration.jl">Filtration.jl</a> is a Julia package for solving optimal control problems arising in production–regeneration systems. It provides a high-level interface to define, analyze, and solve this specific class of control problems.</p><p>This package is designed to : </p><ul><li>provide optimal control solutions</li><li>generate feedback synthesis</li><li>propose methods to construct a real-world control from optimal solutions</li><li>fit model with real-world data</li></ul><h1 id="Installation"><a class="docs-heading-anchor" href="#Installation">Installation</a><a id="Installation-1"></a><a class="docs-heading-anchor-permalink" href="#Installation" title="Permalink"></a></h1><p>First of all, make sure you have <a href="https://julialang.org/downloads/">Julia</a> installed.</p><p>This repository is private, so installing the package requires GitHub access to it (your git credentials must be authorized on <code>remydutto/Filtration.jl</code>). If you don&#39;t have access yet and are interested in trying or using <a href="https://remydutto.github.io/doc-Filtration.jl">Filtration.jl</a>, <a href="https://remydutto.github.io/">please contact me</a>.</p><p>Once authorized, open Julia&#39;s REPL, press &lt;kbd&gt;]&lt;/kbd&gt; to enter the package mode, and add the package:</p><pre><code class="language-julia hljs">pkg&gt; add https://github.com/remydutto/Filtration.jl</code></pre><h1 id="Getting-started"><a class="docs-heading-anchor" href="#Getting-started">Getting started</a><a id="Getting-started-1"></a><a class="docs-heading-anchor-permalink" href="#Getting-started" title="Permalink"></a></h1><p>To see how to construct and solve a production-regeneration problem using <a href="https://remydutto.github.io/doc-Filtration.jl">Filtration.jl</a>, please check <a href="https://remydutto.github.io/doc-Filtration.jl/dev/basic-usage.html">basic usage example</a>.</p><h2 id="Reproducibility"><a class="docs-heading-anchor" href="#Reproducibility">Reproducibility</a><a id="Reproducibility-1"></a><a class="docs-heading-anchor-permalink" href="#Reproducibility" title="Permalink"></a></h2><details><summary>The documentation of this package was built using these direct dependencies,</summary><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Status `~/work/Filtration.jl/Filtration.jl/docs/Project.toml`
   [a0c0ee7d] DifferentiationInterface v0.7.21
-⌃ [e30172f5] Documenter v1.17.0
+  [e30172f5] Documenter v1.19.0
   [8171f1f2] Filtration v0.1.0 `~/work/Filtration.jl/Filtration.jl`
   [f6369f11] ForwardDiff v1.4.5
   [b6b21f68] Ipopt v1.15.0
   [4854310b] MINPACK v1.3.0
   [f4238b75] NLPModelsIpopt v0.11.3
-⌃ [8913a72c] NonlinearSolve v4.16.0
+⌃ [8913a72c] NonlinearSolve v4.19.1
   [5f98b655] OptimalControl v2.0.4
-⌃ [7f7a1694] Optimization v5.4.0
-⌃ [fd9f6733] OptimizationMOI v0.5.11
+⌃ [7f7a1694] Optimization v5.7.0
+⌃ [fd9f6733] OptimizationMOI v1.4.0
 ⌃ [1dea7af3] OrdinaryDiffEq v6.111.0
   [91a5bcdd] Plots v1.41.7
-⌃ [220ca800] StructuralIdentifiability v0.5.17
+  [220ca800] StructuralIdentifiability v0.5.31
 Info Packages marked with ⌃ have new versions available and may be upgradable.</code></pre></details><details><summary>and using this machine and Julia version.</summary><pre class="documenter-example-output"><code class="nohighlight hljs ansi">Julia Version 1.12.7
 Commit 6d172b025e4 (2026-08-15 08:05 UTC)
 Build Info:
   Official https://julialang.org release
 Platform Info:
   OS: Linux (x86_64-linux-gnu)
-  CPU: 2 × AMD EPYC 7763 64-Core Processor
+  CPU: 2 × AMD EPYC 9V74 80-Core Processor
   WORD_SIZE: 64
-  LLVM: libLLVM-18.1.7 (ORCJIT, znver3)
+  LLVM: libLLVM-18.1.7 (ORCJIT, znver4)
   GC: Built with stock GC
 Threads: 1 default, 1 interactive, 1 GC (on 2 virtual cores)
 Environment:
@@ -31,16 +31,19 @@ Environment:
   [47edcb42] ADTypes v1.24.0
   [14f7f29c] AMD v0.5.3
   [a4c015fc] ANSIColoredPrinters v0.0.1
-⌅ [c3fe647b] AbstractAlgebra v0.47.6
+  [c3fe647b] AbstractAlgebra v0.50.2
+  [6e696c72] AbstractPlutoDingetjes v1.4.1
   [1520ce14] AbstractTrees v0.4.5
   [7d9f7c33] Accessors v0.1.45
   [79e6a3ab] Adapt v4.7.0
   [66dad0bd] AliasTables v1.1.3
   [ec485272] ArnoldiMethod v0.4.0
-⌃ [4fba245c] ArrayInterface v7.30.0
+  [4fba245c] ArrayInterface v7.30.1
   [4c555306] ArrayLayouts v1.12.2
   [a9b6321e] Atomix v1.1.3
+  [aae01518] BandedMatrices v1.12.0
   [e2ed5e7c] Bijections v0.2.2
+  [caf10ac8] BipartiteGraphs v0.1.13
   [c3b6d118] BitIntegers v0.3.7
   [62783981] BitTwiddlingConvenienceFunctions v0.1.6
   [8e7c35d0] BlockArrays v1.10.0
@@ -61,7 +64,6 @@ Environment:
   [c3611d14] ColorVectorSpace v0.11.0
   [5ae59095] Colors v0.13.1
 ⌅ [861a8166] Combinatorics v1.0.2
-  [a80b9123] CommonMark v1.0.4
   [38540f10] CommonSolve v0.2.14
   [bbf7d656] CommonSubexpressions v0.3.1
   [f70d9fcc] CommonWorldInvalidations v1.2.0
@@ -76,19 +78,15 @@ Environment:
   [9a962f9c] DataAPI v1.16.0
   [864edb3b] DataStructures v0.19.6
   [8bb1440f] DelimitedFiles v1.9.1
-⌅ [2b5f629d] DiffEqBase v6.214.1
+⌅ [2b5f629d] DiffEqBase v6.218.0
 ⌃ [459566f4] DiffEqCallbacks v4.19.2
-⌃ [77a26b50] DiffEqNoiseProcess v5.32.0
   [163ba53b] DiffResults v1.1.0
   [b552c78f] DiffRules v1.16.0
   [a0c0ee7d] DifferentiationInterface v0.7.21
-  [8d63f2c5] DispatchDoctor v0.4.28
-  [31c24e10] Distributions v0.25.131
   [ffbed154] DocStringExtensions v0.9.5
-⌃ [e30172f5] Documenter v1.17.0
-⌅ [5b8099bc] DomainSets v0.7.18
-⌃ [7c1d4256] DynamicPolynomials v0.6.6
-  [06fc5a27] DynamicQuantities v1.13.0
+  [e30172f5] Documenter v1.19.0
+  [5b8099bc] DomainSets v0.8.1
+  [7c1d4256] DynamicPolynomials v0.6.8
   [4e289a0a] EnumX v1.0.7
   [f151be2c] EnzymeCore v0.8.21
 ⌅ [1037b233] ExaModels v0.9.7
@@ -102,27 +100,23 @@ Environment:
   [a4df4552] FastPower v1.5.0
   [1a297f60] FillArrays v1.17.0
   [8171f1f2] Filtration v0.1.0 `~/work/Filtration.jl/Filtration.jl`
-⌅ [64ca27bc] FindFirstFunctions v1.8.0
+  [64ca27bc] FindFirstFunctions v3.2.1
   [6a86dc24] FiniteDiff v2.33.0
 ⌅ [53c48c17] FixedPointNumbers v0.8.6
   [1fa38f19] Format v1.3.7
   [f6369f11] ForwardDiff v1.4.5
   [a85aefff] FunctionMaps v0.1.2
   [069b7b12] FunctionWrappers v1.1.3
-⌅ [77dc65aa] FunctionWrappersWrappers v0.1.3
+  [77dc65aa] FunctionWrappersWrappers v1.13.0
   [46192b85] GPUArraysCore v0.2.0
   [28b8d3ca] GR v0.73.27
-⌃ [a0844989] Gamma v1.1.0
   [c145ed77] GenericSchur v0.5.8
   [d7ba0133] Git v1.5.0
-  [c27321d9] Glob v1.5.0
   [86223c79] Graphs v1.14.0
-  [42e2da0e] Grisu v1.0.2
   [0b43b601] Groebner v0.10.6
-  [34004b35] HypergeometricFunctions v0.3.30
   [b5f81e59] IOCapture v1.0.0
   [615f187c] IfElse v0.1.1
-⌅ [3263718b] ImplicitDiscreteSolve v1.10.0
+⌃ [3263718b] ImplicitDiscreteSolve v1.11.0
   [d25df0c9] Inflate v0.1.5
   [18e54dd8] IntegerMathUtils v0.1.4
   [8197267c] IntervalSets v0.7.14
@@ -135,8 +129,6 @@ Environment:
   [692b3bcd] JLLWrappers v1.8.0
   [682c06a0] JSON v1.7.1
   [ae98c720] Jieko v0.2.1
-  [98e50ef6] JuliaFormatter v2.13.0
-  [70703baa] JuliaSyntax v1.0.2
 ⌃ [ccbc3e58] JumpProcesses v9.29.0
   [63c18a36] KernelAbstractions v0.9.42
   [ba0b0d4f] Krylov v0.10.9
@@ -146,10 +138,10 @@ Environment:
   [0e77f7df] LazilyInitializedFields v1.3.0
   [1d6d02ad] LeftChildRightSiblingTrees v0.3.0
 ⌃ [87fe0de2] LineSearch v0.1.14
-⌃ [d3d80556] LineSearches v7.7.1
+  [d3d80556] LineSearches v7.8.1
   [5c8ed15e] LinearOperators v2.14.2
 ⌅ [7ed4a6bd] LinearSolve v3.87.0
-⌅ [2ab3a3ac] LogExpFunctions v0.3.29
+  [2ab3a3ac] LogExpFunctions v1.0.1
   [e6f89c97] LoggingExtras v1.2.0
   [4854310b] MINPACK v1.3.0
   [d8e11817] MLStyle v0.4.17
@@ -161,7 +153,9 @@ Environment:
   [bb5d69b7] MaybeInplace v0.1.8
   [442fdcdd] Measures v0.3.3
   [e1d29d7a] Missings v1.2.0
-⌅ [961ee093] ModelingToolkit v10.32.1
+⌃ [961ee093] ModelingToolkit v11.26.8
+⌃ [7771a370] ModelingToolkitBase v1.42.2
+⌃ [6bb917b9] ModelingToolkitTearing v1.15.0
   [2e0e35c7] Moshi v0.3.12
   [46d2c3a1] MuladdMacro v0.2.7
   [102ac46a] MultivariatePolynomials v0.5.19
@@ -171,26 +165,26 @@ Environment:
   [e01155f1] NLPModelsModifiers v0.8.0
   [d41bc354] NLSolversBase v8.0.1
   [77ba4419] NaNMath v1.1.4
-⌅ [2edaba10] Nemo v0.52.4
-⌃ [8913a72c] NonlinearSolve v4.16.0
-⌃ [be0214bd] NonlinearSolveBase v2.11.2
-⌃ [5959db7a] NonlinearSolveFirstOrder v2.0.0
-⌃ [9a2c21bd] NonlinearSolveQuasiNewton v1.12.0
-⌃ [26075421] NonlinearSolveSpectralMethods v1.6.0
+  [2edaba10] Nemo v0.56.1
+⌃ [8913a72c] NonlinearSolve v4.19.1
+⌅ [be0214bd] NonlinearSolveBase v2.30.3
+⌃ [5959db7a] NonlinearSolveFirstOrder v2.1.1
+⌃ [9a2c21bd] NonlinearSolveQuasiNewton v1.13.1
+⌃ [26075421] NonlinearSolveSpectralMethods v1.7.1
   [6fe1bfb0] OffsetArrays v1.17.0
-⌃ [429524aa] Optim v2.2.2
+  [429524aa] Optim v2.3.1
   [5f98b655] OptimalControl v2.0.4
-⌃ [7f7a1694] Optimization v5.4.0
-⌅ [bca83a33] OptimizationBase v4.2.0
-⌃ [fd9f6733] OptimizationMOI v0.5.11
-⌃ [36348300] OptimizationOptimJL v0.4.9
+⌃ [7f7a1694] Optimization v5.7.0
+⌃ [bca83a33] OptimizationBase v5.3.0
+⌃ [fd9f6733] OptimizationMOI v1.4.0
+⌃ [36348300] OptimizationOptimJL v0.4.18
 ⌅ [bac558e1] OrderedCollections v1.8.2
 ⌃ [1dea7af3] OrdinaryDiffEq v6.111.0
 ⌅ [89bda076] OrdinaryDiffEqAdamsBashforthMoulton v1.11.0
 ⌅ [6ad6398a] OrdinaryDiffEqBDF v1.26.0
-⌅ [bbf590c4] OrdinaryDiffEqCore v3.28.0
+⌅ [bbf590c4] OrdinaryDiffEqCore v3.33.1
 ⌅ [50262376] OrdinaryDiffEqDefault v1.14.0
-⌅ [4302a76b] OrdinaryDiffEqDifferentiation v2.7.0
+⌅ [4302a76b] OrdinaryDiffEqDifferentiation v2.9.0
 ⌅ [9286f039] OrdinaryDiffEqExplicitRK v1.12.0
 ⌅ [e0540318] OrdinaryDiffEqExponentialRK v1.15.0
 ⌅ [becaefa8] OrdinaryDiffEqExtrapolation v1.18.0
@@ -208,7 +202,7 @@ Environment:
 ⌅ [5b33eab2] OrdinaryDiffEqPRK v1.10.0
 ⌅ [04162be5] OrdinaryDiffEqQPRK v1.10.0
 ⌅ [af6ede74] OrdinaryDiffEqRKN v1.12.0
-⌅ [43230ef6] OrdinaryDiffEqRosenbrock v1.29.0
+⌅ [43230ef6] OrdinaryDiffEqRosenbrock v1.31.1
 ⌅ [2d112036] OrdinaryDiffEqSDIRK v1.14.0
 ⌅ [669c94d9] OrdinaryDiffEqSSPRK v1.14.0
 ⌅ [e3e12d00] OrdinaryDiffEqStabilizedIRK v1.14.0
@@ -216,7 +210,6 @@ Environment:
 ⌅ [fa646aed] OrdinaryDiffEqSymplecticRK v1.13.0
 ⌅ [b1df2697] OrdinaryDiffEqTsit5 v1.12.0
 ⌅ [79d7bb75] OrdinaryDiffEqVerner v1.14.0
-  [90014a1f] PDMats v0.11.41
   [3e851597] ParamPunPam v0.5.8
 ⌅ [d96e819e] Parameters v0.12.3
 ⌅ [69de0a69] Parsers v2.8.7
@@ -227,7 +220,7 @@ Environment:
   [f517fe37] Polyester v0.7.19
   [1d0040c9] PolyesterWeave v0.2.2
   [85a6dd25] PositiveFactorizations v0.2.4
-⌃ [d236fae5] PreallocationTools v0.4.34
+  [d236fae5] PreallocationTools v1.7.1
   [aea7be01] PrecompileTools v1.3.4
   [21216c6a] Preferences v1.5.2
   [27ebfcd6] Primes v0.5.7
@@ -235,9 +228,10 @@ Environment:
   [92933f4c] ProgressMeter v1.11.0
   [43287f4e] PtrArrays v1.4.0
   [0c0d3e7f] PureKLU v1.4.1
-  [1fd47b50] QuadGK v2.11.3
   [fb686558] RandomExtensions v0.4.4
-⌅ [73480bc8] RationalFunctionFields v0.2.3
+  [73480bc8] RationalFunctionFields v0.3.4
+  [988b38a3] ReadOnlyArrays v0.2.0
+  [795d4caa] ReadOnlyDicts v1.0.1
   [3cdcf5f2] RecipesBase v1.3.4
   [01d81517] RecipesPipeline v0.6.12
 ⌅ [731186ca] RecursiveArrayTools v3.54.0
@@ -245,14 +239,12 @@ Environment:
   [2792f1a3] RegistryInstances v0.1.0
   [05181044] RelocatableFolders v1.0.1
   [ae029012] Requires v1.3.1
-  [ae5879a3] ResettableStacks v1.4.0
   [37e2e3b7] ReverseDiff v1.17.0
-  [79098fc4] Rmath v0.9.0
-⌃ [f2b01f46] Roots v3.0.7
+  [f2b01f46] Roots v3.0.8
   [7e49a35a] RuntimeGeneratedFunctions v0.5.25
 ⌃ [9dfe8606] SCCNonlinearSolve v1.13.0
   [94e857df] SIMDTypes v0.1.0
-⌅ [0bca4576] SciMLBase v2.153.1
+⌅ [0bca4576] SciMLBase v2.155.2
 ⌃ [19f34311] SciMLJacobianOperators v0.1.17
 ⌅ [a6db7da4] SciMLLogging v1.10.1
   [c0aeaf25] SciMLOperators v1.30.0
@@ -260,8 +252,8 @@ Environment:
   [53ae85a6] SciMLStructures v1.10.5
   [6c6a2e73] Scratch v1.3.0
   [efcf1570] Setfield v1.1.2
-⌃ [992d4aef] Showoff v1.0.3
-⌃ [727e6d20] SimpleNonlinearSolve v2.11.0
+  [992d4aef] Showoff v1.1.1
+⌃ [727e6d20] SimpleNonlinearSolve v2.12.0
   [699a6c99] SimpleTraits v0.9.6
   [2b935e18] SmallCollections v0.6.3
   [ff4d7338] SolverCore v0.3.10
@@ -272,46 +264,42 @@ Environment:
   [276daf66] SpecialFunctions v2.9.0
   [860ef19b] StableRNGs v1.0.4
   [0c0c59c1] StarAlgebras v0.3.0
+  [64909d44] StateSelection v1.11.1
   [aedffcd0] Static v1.4.6
   [0d7ed370] StaticArrayInterface v1.10.0
-⌃ [90137ffa] StaticArrays v1.9.19
+  [90137ffa] StaticArrays v1.9.20
   [1e83bf80] StaticArraysCore v1.4.4
-⌃ [10745b16] Statistics v1.11.1
+  [10745b16] Statistics v1.11.5
   [82ae8749] StatsAPI v1.8.0
   [2913bbd2] StatsBase v0.34.13
-  [4c63d2b9] StatsFuns v2.2.1
   [7792a7ef] StrideArraysCore v0.5.9
   [ec057cc2] StructUtils v2.8.5
-⌃ [220ca800] StructuralIdentifiability v0.5.17
+  [220ca800] StructuralIdentifiability v0.5.31
   [2efcf032] SymbolicIndexingInterface v0.3.55
-⌅ [19f23fe9] SymbolicLimits v0.2.3
-⌅ [d1185830] SymbolicUtils v3.32.0
-⌅ [0c5d862f] Symbolics v6.58.0
+  [19f23fe9] SymbolicLimits v1.2.1
+⌅ [d1185830] SymbolicUtils v4.45.0
+  [0c5d862f] Symbolics v7.39.0
   [ed4db957] TaskLocalValues v0.1.3
   [62fd8b95] TensorCore v0.1.1
   [8ea1fca8] TermInterface v2.0.0
   [5d786b92] TerminalLoggers v0.1.8
-  [1c621080] TestItems v1.1.0
   [8290d209] ThreadingUtilities v0.5.6
 ⌅ [a759f4b9] TimerOutputs v0.5.29
   [3bb67fe8] TranscodingStreams v0.11.3
-  [410a4b4d] Tricks v0.1.13
   [781d530d] TruncatedStacktraces v1.4.0
-  [5c2747f8] URIs v1.7.0
   [3a884ed6] UnPack v1.0.2
   [1cfade01] UnicodeFun v0.4.1
-  [1986cc42] Unitful v1.28.0
-  [a7c27f48] Unityper v0.1.6
   [013be700] UnsafeAtomics v0.3.2
   [41fe7b60] Unzip v0.2.0
-⌃ [ae81ac8f] ASL_jll v0.1.3+0
+  [d30d5f5c] WeakCacheSets v0.1.0
+  [ae81ac8f] ASL_jll v0.1.5+0
   [6e34b625] Bzip2_jll v1.0.9+0
   [83423d85] Cairo_jll v1.18.7+0
   [ee1fde0b] Dbus_jll v1.16.2+0
   [2702e6a9] EpollShim_jll v0.0.20230411+1
   [2e619515] Expat_jll v2.8.3+0
 ⌅ [b22a6f82] FFMPEG_jll v8.1.2+0
-⌅ [e134572f] FLINT_jll v301.300.102+0
+  [e134572f] FLINT_jll v301.600.0+0
   [a3f928ae] Fontconfig_jll v2.17.1+0
   [d7e528f0] FreeType2_jll v2.14.3+1
   [559328eb] FriBidi_jll v1.0.17+0
@@ -323,7 +311,7 @@ Environment:
   [f8c6e375] Git_jll v2.55.0+0
   [7746bdde] Glib_jll v2.88.3+0
   [3b182d85] Graphite2_jll v1.3.16+0
-⌅ [2e76f6c2] HarfBuzz_jll v8.5.1+0
+  [2e76f6c2] HarfBuzz_jll v100.14003.0+0
   [e33a78d0] Hwloc_jll v2.14.0+0
   [1d5cc7b8] IntelOpenMP_jll v2025.2.0+0
 ⌅ [9cc047cb] Ipopt_jll v300.1400.1902+0
@@ -345,15 +333,14 @@ Environment:
   [9bd350c2] OpenSSH_jll v10.5.1+0
   [efe28fd5] OpenSpecFun_jll v0.5.6+0
   [91d4177d] Opus_jll v1.6.1+0
-⌃ [36c8627f] Pango_jll v1.58.0+0
+  [36c8627f] Pango_jll v1.58.2+0
   [30392449] Pixman_jll v0.46.4+0
   [c0090381] Qt6Base_jll v6.10.2+2
   [629bc702] Qt6Declarative_jll v6.10.2+2
   [ce943373] Qt6ShaderTools_jll v6.10.2+1
   [6de9746b] Qt6Svg_jll v6.10.2+0
   [e99dba38] Qt6Wayland_jll v6.10.2+1
-  [f50d1b31] Rmath_jll v0.5.2+0
-⌃ [319450e9] SPRAL_jll v2025.9.18+0
+  [319450e9] SPRAL_jll v2025.9.18+1
   [a44049a8] Vulkan_Loader_jll v1.3.243+0
   [a2964d1f] Wayland_jll v1.24.0+0
 ⌅ [02c8fc9c] XML2_jll v2.13.9+0
@@ -387,7 +374,7 @@ Environment:
   [35ca27e7] eudev_jll v3.2.14+0
 ⌅ [214eeab7] fzf_jll v0.61.1+0
   [a4ae2306] libaom_jll v3.14.1+0
-⌃ [0ac62f75] libass_jll v0.17.4+0
+  [0ac62f75] libass_jll v0.17.5+0
   [1183f4f0] libdecor_jll v0.2.2+0
   [8e53e030] libdrm_jll v2.4.134+0
   [2db6ffa8] libevdev_jll v1.13.4+0
@@ -429,7 +416,6 @@ Environment:
   [6462fe0b] Sockets v1.11.0
   [2f01184e] SparseArrays v1.12.0
   [f489334b] StyledStrings v1.11.0
-  [4607b0f0] SuiteSparse
   [fa267f1f] TOML v1.0.3
   [a4e569a6] Tar v1.10.0
   [8dfed614] Test v1.11.0
@@ -455,4 +441,4 @@ Info Packages marked with ⌃ and ⌅ have new versions available. Those with �
     <img src="./assets/Logo-INRAE.jpg" width="200px">
     <img src="./assets/Logo-WOC.png" width="200px">
     <img src="./assets/Logo-Defi-Region.jpg" width="200px">
-</div></article><nav class="docs-footer"><a class="docs-footer-nextpage" href="background.html">Background »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.17.0 on <span class="colophon-date" title="Thursday 3 September 2026 17:27">Thursday 3 September 2026</span>. Using Julia version 1.12.7.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+</div></article><nav class="docs-footer"><a class="docs-footer-nextpage" href="background.html">Background »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.19.0 on <span class="colophon-date" title="Thursday 3 September 2026 17:36">Thursday 3 September 2026</span>. Using Julia version 1.12.7.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
