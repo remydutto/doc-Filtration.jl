@@ -30,9 +30,19 @@ CI, test coverage and license badges above refer to the source repository, [Filt
 
 ## Publishing
 
-The documentation is built locally, not by GitHub Actions. With `Filtration.jl` cloned next to this repository:
+The documentation is built locally, not by GitHub Actions. This repository hosts two sites, each built from its source repository cloned next to this one:
+
+| Source | Published at |
+|---|---|
+| `Filtration.jl` (`main`) | <https://remydutto.github.io/doc-Filtration.jl/dev/> |
+| `FiltrationSimulation.jl` (`master`) | <https://remydutto.github.io/doc-Filtration.jl/simulation/> |
 
 ```sh
-julia publish.jl            # build origin/main of Filtration.jl and push it to gh-pages
-julia publish.jl --preview  # build only, to check the result before publishing
+julia publish.jl                          # build both and push them to gh-pages
+julia publish.jl FiltrationSimulation.jl  # only that one
+julia publish.jl --preview                # build only, to check the result before publishing
 ```
+
+Building the FiltrationSimulation.jl site needs Node.js (`npx`).
+
+Every page of both sites shows the same header, with a link to each package. It lives in [`shared/ecosystem.js`](shared/ecosystem.js) and is published with the sites: to add or rename a package, edit that file and publish again.
