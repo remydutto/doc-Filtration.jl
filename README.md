@@ -27,3 +27,12 @@ Documentation for the [Filtration.jl](https://github.com/remydutto/Filtration.jl
 | Licence           | [![License: MIT][licence-img]][licence-url]   |
 
 CI, test coverage and license badges above refer to the source repository, [Filtration.jl](https://github.com/remydutto/Filtration.jl), since this repository only hosts the built documentation, published on the `gh-pages` branch.
+
+## Publishing
+
+The documentation is built locally, not by GitHub Actions. With `Filtration.jl` cloned next to this repository:
+
+```sh
+julia publish.jl            # build origin/main of Filtration.jl and push it to gh-pages
+julia publish.jl --preview  # build only, to check the result before publishing
+```

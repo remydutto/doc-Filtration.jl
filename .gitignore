@@ -27,3 +27,6 @@ deps/src/
 
 Manifest.toml 
 # Remove to provide it to the user
+
+# Local checkouts and builds made by publish.jl
+.build/
