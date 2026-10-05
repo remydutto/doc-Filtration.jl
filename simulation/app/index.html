@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-demo="recording.json">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FiltrationSimulation — scenario builder</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4 6h16M4 12h10M4 18h13"
+                stroke="white"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">FiltrationSimulation</span>
+            <span class="brand-tagline">Scenario builder</span>
+          </div>
+        </div>
+
+        <div id="sidebar-scroll" class="sidebar-scroll"></div>
+        <div id="sidebar-footer" class="sidebar-footer"></div>
+      </aside>
+
+      <main class="main">
+        <div class="topbar">
+          <div>
+            <h1>Scenario builder</h1>
+            <p>Build a Plant, add one or more Controllers, then Run to compare closed-loop runs.</p>
+          </div>
+          <span id="status-pill" class="pill"><span class="dot"></span>Set up your scenario</span>
+        </div>
+
+        <div id="tabbar" class="tabbar"></div>
+        <div id="toolbar" class="toolbar"></div>
+
+        <div class="plot-card">
+          <span id="criterion-label" class="criterion-label" hidden></span>
+          <div id="plot" hidden></div>
+          <div id="params-plot" hidden></div>
+          <div id="metrics-plot" hidden></div>
+          <div id="placeholder" class="placeholder">
+            <div>
+              <div class="icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 19V5m0 14h16M8 15l3-4 3 3 4-6"
+                    stroke="#6d4aff"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              Add a Plant and at least one controller, then click « Run » to see results here.
+            </div>
+          </div>
+        </div>
+
+        <div id="status-banner" class="status-banner"></div>
+      </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
